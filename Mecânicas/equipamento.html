@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mecânicas RPG</title>
+</head>
+<!--7-->
+<body>
+    <div class="navegar">
+        <div id="conteudo">
+            <h3>NAVEGAÇÃO</h3>
+            <li><a href="pontos.html">Atributos e Perícias</a></li>
+            <li><a href="combate.html">Sistema de Combate</a></li>
+            <li><a href="dificuldade.html">Sistema de Dificuldade</a></li>
+            <li id="atual"><a href="equipamento.html">Itens e Equipamentos</a></li>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>ITENS E EQUIPAMENTOS</h1>
+        <h2>Itens</h2>
+        <p>Itens são ferramentas com o próposito quase exclusivo à utilidade, podendo ser de função médica, comidas, bebidas, camuflagem etc...</p>
+        <p>A maioria dos itens de <b>suporte</b> terão alguma dificuldade para serem usados, geralmente caindo na mão de suportes ou arcanos para serem utilizados, já que esses na maioria das vezes possuem mais perícias em que são habilidosos, ou seja, um alcance mais amplo de itens que podem ser utilizados.</p>
+        <p>Quase todos os itens irão consumir uma ação comum, apesar de que existem exceções, assim como habilidades que permitem a utilização sem consumo de ações em batalhas.</p>
+        <h2>Equipamentos</h2>
+        <p>Todos equipamentos também são itens mas, diferente dos itens comuns, esses são utilizados exclusivamente para combate, sendo basicamente armas e armaduras. Equipamentos são divididos em:</p>
+        <li>
+            Curta-distância
+            <ol>Facas, espadas, porretes, machados, shotguns, metralhadoras...</ol>
+        </li>
+        <li>
+            Longa-distância
+            <ol>Pistolas, rifles...</ol>
+        </li>
+        <li>
+            Arremesso
+            <ol>Lanças, machetes, granadas...</ol>
+        </li>
+        <li>
+            Acessórios
+            <ol>Luvas, capacetes, escudos, munição...</ol>
+        </li> 
+        <h2>Funcionamento de armas</h3>
+        <p>Armas como as mencionadas em curta-distância e longa-distância funcionam de forma um pouco diferente da dos outros equipamentos, também possuindo certas estatísticas extras em suas descrições que irão definir range de crítico, multiplicador de crítico, distância limite e energia consumida por ataque.</p>
+        <h3>Range de Crítico</h3>
+        <p>Cada arma possui um valor minimo de roll natural para que o ataque seja considerado um "crítico", esse valor geralmente está associado ao alcance da arma; quanto menor o alcance, maior o range.</p>
+        <p>É importante mencionar que o crítico além de garantir acertos em desvios, também (na maioria das vezes) aumenta o dano do ataque; não é raro ver uma arma que possui por exemplo um crítico de 15+ mas não tem multiplicador de dano.</p>
+        <h3>Multiplicador de Crítico</h3>
+        <p>Quantos rolls extras serão dados por atingir um crítico; na maioria das vezes apenas armas que consomem energia ou possuem alcance incrivelmente baixo terão um multiplicador maior que 2x, mas isso depende muito.</p>
+        <p>O multiplicador não é quantas vezes o dano final será multiplicado, mas sim quantos rolls extras serão usados no roll de dano; um multiplicador de 2x significa que será rolado 2d em vez de 1d.</p>
+        <h3>Alcance</h3>
+        <p>A distância limite, em quadrados, entre dois personagens que ataques podem ser realizados. Esse valor só irá depender da arma, se ela for curta o alcance vai ser curto, se ela for longa o alcance vai ser maior; armas de fogo possuem alcance ilimitado, mas um <b>alcance eficáz</b> em que não haverá uma dificuldade para o ataque.</p>
+        <p>O alcance sempre estará representado em quadrados ENTRE o personagem e o alvo, um alcance de 1m² significa que pode haver um quadrado entre o personagem e o alvo e o ataque ainda será possível, não que ambos precisam estar a um quadrado de distância.</p>
+        <h3>Consumo de Energia</h3>
+        <p>Armas mais pesadas, associadas a ataques fortes como machados de guerra, martelos, espadões terão um custo de energia para contribuir por seu dano ou multiplicador de dano mais elevado.</p>
+        <h3>Munição</h3>
+        <p>Armas de fogo irão utilizar <b>munição</b>, que será representada em pacotes de munição. Um personagem pode carregar no máximo 3 desses e, ao ativar um deles, poderá atirar uma pequena quantidade de tiros ou literalmente metralhar. A munição que será vendida pelas lojas da organização é mágica, apenas sendo efetivos contra entidades, dando apenas um de dano caso acerte um ser humano ou um objeto.</p>
+        <p>A quantidade de tiros acertados é definido da seguinte forma:</p>
+        <li>
+            Tiros "controlados"
+            <ol>Ao atirar uma pequena quantidade de vezes, você garante que as balas irão na direção certa; essa "pequena quantidade de vezes" é em definida de jeitos diferentes dependendo da arma. Em geral, você sempre tem um acerto garantido (diferente de acordo com a arma), que será somado a um valor definido de formas diferentes pela sua agilidade. Uma pistola, por exemplo, teria mais facilidade em acertar mais que um tiro, já com um rifle de precisão por exemplo, seria díficil conseguir mais de um tiro.</ol>
+        </li>
+        <li>
+            Tiros consecutivos
+            <ol>Atirando várias vezes você não possui acertos garantidos e dependerá completamente da sorte com seu roll de <b>precisão</b>, mas novamente cada arma terá um sistema diferente para isso, armas automáticas se benificiando mais desse sistema.</ol>
+        </li>
+    </div>
+</body>
+</html>

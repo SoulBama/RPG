@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mecânicas RPG</title>
+</head>
+<!--7-->
+<body>
+    <div class="navegar">
+        <div id="conteudo">
+            <h3>NAVEGAÇÃO</h3>
+            <li><a href="pontos.html">Atributos e Perícias</a></li>
+            <li id="atual"><a href="combate.html">Sistema de Combate</a></li>
+            <li><a href="dificuldade.html">Sistema de Dificuldade</a></li>
+            <li><a href="equipamento.html">Itens e Equipamentos</a></li>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>SISTEMA DE COMBATE</h1>
+        <h2>Conceito</h2>
+        <p>Meu objetivo com o atual sistema de combate é algo <b>lento</b> e dependente de <b>estratégia</b>, para isso algumas coisas novas foram adicionadas ao sistema "genérico", como por exemplo uma energia (stamina) com funções bem mais importantes que o comum e o tabuleiro de batalha.</p>
+        <p>Também estou tentando criar algo com mais liberdade para os jogadores, eles poderão utilizar a área de batalha ao seu favor para fazerem ações únicas, assim como poderão atacar, contra-atacar e bloquear de formas diferentes para causar ou evitar efeitos adicionais como sangramento, cegueza entre outros; de nenhuma forma estou falando para os jogadores SÓ fazerem ações únicas, não quero cinco pessoas parecendo macacos balançando pela fiação elétrica de um bairro para pular em um agatálogico e eletrecutar ele enquanto causam uma hemorragia nele.</p>
+
+        <h2>Energia</h2>
+        <p>A stamina do meu RPG, a energia. A energia será um de seus status junto do seu HP, ela será utilizada para técnicas arcanas e habilidades, assim como manuseio de armas pesadas, bloqueios e contra-ataques. Lembrem-se que a energia é algo de extremo valor para a batalha, caso você fique sem energia você estará limitado a ataques fracos, bloqueios inúteis e basicamente será um cone na batalha.</p>
+        <p>Cada jogador começará com um valor dependente de sua classe e atributos INICIAIS de força e constituição, seguindo o seguinte esquema:</p>
+        <li>Arcanos começarão com 10+Força+Constituição de energia; ganhando +1 de energia por nível até o Lv. 9, aumentando para +2 do nível 10 em diante. Isso totaliza <b>~31</b> de energia no nível máximo.</li>
+        <li>Suportes começarão com 15+Força+Constituição de energia; ganhando +1 de energia por nível até o Lv. 4, aumentando para +2 do nível 5 em diante. Isso totaliza <b>~40</b> de energia no nível máximo</li>
+        <li>Combatentes começarão com 15+Força+Constituição de energia; ganhando +2 de energia por nível até o Lv. 9, aumentando para +3 do nível 10 em diante. Isso totaliza <b>~49</b> de energia no nível máximo</li>
+        <p>Arcanos utilizarão energia principalmente para técnicas mágicas que, em geral, gastarão apenas 1 de energia por uso, apesar de que coisas mais extremas podem gastar 2 ou 3, dependendo de o que você quer fazer. É inevitável que você acabe gastando energia correndo ou carregando peso, mas não é algo que sua classe PRECISA fazer.</p>
+        <p>Suportes estarão mais envolvidos em combates e por isso ganham mais energia do que arcanos, você geralmente estará em área de perigo e precisará de uma energia reserva para bloqueios de emergência ou correr para a segurança caso necessário.</p>
+        <p>Combatentes sempre estarão na linha de frente e precisam de alguma maneira para se mantarem em bom estado, por isso ganham tanta energia com seus níveis, bloqueios serão de extrema importância para receberem menos dano ou caso necessário realizarem mais dano em um curto período de tempo.</p>
+
+        <h2>Ataques, Bloqueios, Desvios</h2>
+        <p>O ataque segue o conceito básico, com a exceção de que o roll utilizado são as perícias relacionadas: luta para corpo-a-corpo, precisão para à distância, pressão para magia. Além disso, o total do roll de ataque só tem a função de servir como "contra" para uma tentativa de desviar, ele não contribuirá para o dano do seu ataque; este será calculado com o dano de sua arma somado com o atributo do ataque (força, agilidade ou arcanismo).</p>
+        <p>Uma falha crítica em um ataque fará com que ele erre automaticamente, enquanto um acerto crítico fará com que o roll de dano utilize 2d no lugar de 1d. Esse multiplicador muda de arma para arma, assim como o "range" que é considerado um acerto crítico, que é normalmente 20. Além dessas coisas que variam com a arma, o alcance limite de um ataque também depende de que arma está sendo usada, esse alcance limite estará representado em quadrados entre você e seu alvo. <br> Arma exemplo:</p>
+        <div class="imagem">
+            <img src="imagens/espada.PNG" alt=""> <br>
+            <p class="imagem">O primeiro número indica o range de crítico, o segundo o multiplicador de crítico e o último, a distância máxima.</p> <br>
+            <img src="imagens/1m.PNG" alt="">
+        </div>
+
+        <p>Ao ser atacado, existem duas coisas principais que podem ser feitas, essas sendo os bloqueios e desvios; desvios são mais simples, é feito um roll de agilidade e se o total for maior que o total do roll de ataque, você conseguiu. Já os bloqueios, eles são soluções "garantidas" para reduzir o dano que vai receber.</p>
+        <p>Um bloqueio pode ser feito com qualquer quantidade de energia, essa quantidade será somada a metade de sua constituição para reduzir o dano de ataques. Por exemplo, se eu tenho 4 de constituição eu já tenho um bloqueio garantido de 2 de dano, mas se quiser eu poderia gastar mais 2 para bloquear 4, ou mais 5 para bloquear 7, ou qualquer quantidade que você deseje.</p>
+        <p>Enquanto desvios possuem um risco maior, eles também possuem uma recompensa maior; não gastar energia e completamente anular o dano recebido vale a pena a "aposta". Isso não quer dizer que bloqueios são fracos, eles são boas formas de diminuir o dano que você vai levar e, caso combinado com um grande HP e resistência, são uma ótima ferramenta. Em geral, desvios são mais úteis contra inimigos mais fracos, você não terá que gastar energia e sairá relativamente ileso, enquanto bloqueios são melhores contra inimigos de nível igual ou superior.</p>
+        <h3>Proteger aliados</h3>
+        <p>Durante um combate, jogadores poderão proteger o personagem de outros jogadores, desde que estejam a dois quadrados de distância. Caso a distância seja maior que essa, um roll de atletismo deve ser realizado, com a dificuldade aumentando em um grau a cada quadrado a mais (muito fácil se for um quadrado a mais, fácil se for dois quadrados a mais...), além de gastar 1 de energia extra por quadrado a mais.</p>
+        <p>Apesar de não ser "proteger" seu aliado, você também pode atacar o oponente que esteja atacando seu aliado, desde que ele esteja no mesmo alcance limite de dois quadrados. O ataque do oponente causará dano completo ao seu aliado, sem ele ter chance de bloquear ou desviar, mas seu ataque também causará dano completo nele. O mesmo sistema de atletismo para distâncias maiores se aplica a isso.</p>
+        <h3>Contra-Ataques</h3>
+        <p>Após bloquear ou desviar de um ataque, é possível contra-atacar o oponente, gastando +5 de energia total para quaisquer ações, seja um ataque normal ou habilidade. O ataque terá dano completo e o oponente poderá tentar desviar ou bloquear, ou até mesmo contra-atracar seu contra-ataque.</p>
+        <p>É também possível contra-atacar logo ao receber um ataque, levando todo o dano inteiro mas com o prejuízo de energia sendo apenas +2, em vez de +5.</p>
+
+        <h2>Turnos</h2>
+        <p>Batalhas são realizadas em turnos que possuem sua ordem definida por um roll de <b>iniciativa</b> no começo da batalha, esse roll possui um valor fixo de 1d100.</p>
+        <p>Cada jogador, em seu turno, terá uma ação comum e uma ação de movimento ou uma ação completa; ambos juntos de um número indefinido de ações livres. Todas essas ações podem ser usadas em qualquer ordem desejada. Ações livres são coisas como tirar um item da bolsa (não utiliza-lo ou consumi-lo), equipar uma arma, falar com outro personagem (ter uma conversa grande não é considerada ação livre); tentar abusar de ações livres em batalha resultará em uma de suas outras ações ser consumida (a sua escolha).</p>
+        <p>Ações de movimento são, bom, movimentos. Devido ao sistema de tabuleiro de combate com alcance máximo assim como outros sistemas, movimentação será de extrema importância em lutas, por isso há um turno especifico para isso. Um jogador pode se movimentar apenas um quadrado por ação de movimento, mas pode gastar energia para se movimentar mais quadrados (+1 energia por quadrado adicional); longas distâncias terão uma difiiculdade adicional, que será da perícia de atletismo.</p>
+        <p>Ações comuns são basicamente o resto que não foi mencionado: utilizar ou consumir um item, atacar, tentar escalar uma construção...</p>
+        <p>Ações especiais são necessárias para utilização de habilidades mais fortes como poderes ententes ou habilidades de grau V de uma perícia. Cada personagem começará com apenas uma dessa que será uma ação especial "normal", basicamente apenas um ataque mais forte. Ações especiais requerem que o jogador sacrifique sua ação comum e ação de movimento, por isso são mais ocasionais, além de gastar uma quantidade de energia que muda de habilidade para habilidade.</p>
+    </div>
+</body>
+</html>

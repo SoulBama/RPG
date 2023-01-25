@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mecânicas RPG</title>
+</head>
+<!--7-->
+<body>
+    <div class="navegar">
+        <div id="conteudo">
+            <h3>NAVEGAÇÃO</h3>
+            <li id="atual"><a href="pontos.html">Atributos e Perícias</a></li>
+            <li><a href="combate.html">Sistema de Combate</a></li>
+            <li><a href="dificuldade.html">Sistema de Dificuldade</a></li>
+            <li><a href="equipamento.html">Itens e Equipamentos</a></li>
+        </div>
+    </div>
+    <div class="container">
+        <h1>ATRIBUTOS E PERÍCIAS</h1>
+        <h2>Visão Geral</h2>
+        <p>Os atributos e perícias nesse RPG foram modificados para um sistema que, em minha opinião, combina mais com um RPG, além de ser mais de minha preferência. Os atributos são basicamente visões gerais de uma "família" de perícias e servem como valores "pais" para essas perícias; um roll de atletismo por exemplo seria 1d20+Força, junto de qualquer grau de "habilidoso" que o personagem tenha, mas vou explicar isso melhor mais para frente.</p>
+        <p>Atributos como <b>Força</b>, <b>Agilidade</b>, <b>Arcanismo</b> e <b>Constituição</b> possuem funções extras em batalha, os três primeiros sendo utilizados para calcular o dano de seus respectivos ataques, agilidade definindo o roll de desvio e constuição definindo a eficácia máxima de um bloqueio.</p>
+        <p>Lendo sobre as perícias você pode perceber que estão "faltando" algumas como sedução, lidar com animais ou pilotagem por exemplo; essas perícias terão seus rolls definidos pelo atributo pai mais próximo da ação que está sendo realizada, tentar seduzir alguém ou lidar com um animal seria carisma e dirigir um carro seria agilidade.</p>
+
+        <h2>Prodígio e Habilidoso</h2>
+        <p>Como mencionado anteriomente, as perícias não possuem um valor próprio e em vez disso utilizam o valor de seus "pais", mas não faz sentido alguem ser igualmente bom em várias coisas diferentes, né? Por isso inclui o sistema de prodígio e habilidoso. Perícias "prodigiosas" são duas perícias relacionadas a sua classe que são escolhidas na criação de personagem, essas perícias escolhidas terão seu roll substituido de 1d20 para 2d20, o roll mais alto sempre sendo utilizado. As perícias de pressão, luta e precisão não podem ser selecionadas.</p>
+        <p>Já o sistema de "habilidoso" existe para você poder ficar melhor em uma perícia. Assim como no sistema de prodígio, na criação de personagem o jogador poderá escolher perícias para ser habilidoso, mas isso funciona de um jeito um pouco diferente; o sistema de habilidoso utiliza pontos que podem ser gastados em perícias para aumentarem seu grau de habilidade, um jogador começando com quatro desses pontos.</p>
+        <p>Abaixo está uma tabela indicando as vantagens de cada grau de habilidade em perícias assim como seus custos. Por favor note que na criação de personagem não é permitido passar do grau II com uma perícia.</p> <br>
+
+        <table>
+            <th>GRAU</th>
+            <th>VANTAGENS</th>
+            <th>CUSTO</th>
+            <tr>
+                <td>I</td>
+                <td>+3 (PERÍCIA)</td>
+                <td>1 Ponto</td>
+            </tr>
+            <tr>
+                <td>II</td>
+                <td>+6 (PERÍCIA), 1 (SKILL)</td>
+                <td>1 Ponto</td>
+            </tr>
+            <tr>
+                <td>III</td>
+                <td>+9 (PERÍCIA), 1 (SKILL)</td>
+                <td>2 Pontos</td>
+            </tr>
+            <tr>
+                <td>IV</td>
+                <td>+12 (PERÍCIA) 2 (SKILL)</td>
+                <td>2 Pontos</td>
+            </tr>
+            <tr>
+                <td>V</td>
+                <td>+15 (PERÍCIA), 2 (SKILL), 1 (ESPECIAL)</td>
+                <td>2 Pontos</td>
+            </tr>
+        </table> <br>
+        <p>Lembre-se que você começará com 5 pontos e no nível máximo terá um total de 30 pontos, que podem ser distribuidos da forma que o jogador quiser, mas lembre-se que apenas uma de suas perícias pode ter o grau V, escolha bem. Mesmo com uma perícia no grau V ainda sobram 22 pontos, que podem formar todas as outras perícias com grau I, ou 11 com grau II, ou 5 com grau III e 1 com grau II, ou 2 com grau IV, 1 com grau III e 1 com grau II; enfim, existem muitas possibilidades e você nem é obrigado a ter uma perícia de grau V, pode fazer algo mais balanceado se quiser.</p>
+        <p>A quantidade de perícias dos primeiros graus podem parecer poucas, mas a matemática pode provar que não! Ações de dificuldade "muito fácil" (5) com um atributo que vale 1 possuem 20% de chance de falhar, mas, com um grau I nessa perícia sua chance cai para 5%, basicamente garantindo que não irá falhar algo com dificuldade muito fácil. O mesmo caso pode ser visto na dificuldade "fácil" (10), se você tem um atributo que vale 1 sua chance de falha é de 45% mas, caso tenha um grau I nessa perícia sua chance de falha cai para 25%, ou então se ter grau II, 5%. Esses são alguns exemplos para dificuldades que você encontrará frequentemente enquanto fora de ação, mas o mesmo ainda é verdade para dificuldades mediana (15) e superiores, é so fazer as contas.</p>
+
+        <h2>Atributos</h2>
+        <p>Como mencionado anteriormente, os atributos são:</p>
+        <li>Força, uma indicação do nível atlético de seu personagem; utilizado para calcular dano de ataques físicos.</li>
+        <li>Agilidade, uma indicação de quão elevado são os sentidos, reflexo e coordenação motora de seu personagem; utilizado para calcular dano de ataques a distância e também para desvios </li>
+        <li>Constituição, uma indicação de quão resistente é o seu personagem; utilizado para definir a eficácia de bloqueios.</li>
+        <li>Inteligência, uma indicação de, bom, quão inteligente é o seu personagem; não é utilizado em batalha. A cada dois pontos em inteligência, um ponto de "habilidoso" é dado para o jogador.</li>
+        <li>Carisma, uma indicação de quão diplomático é o seu personagem, sua capacidade de lidar com seres vivos; não é utilizado em batalha.</li>
+        <li>Arcanismo, uma indicação de quão informado e experiente seu personagem é nas artes arcanas; utilizado para calcular dano de "pressão".</li>
+        <p>Uma definição mais detalhada do significado dos atributos <b>em combate</b> pode ser encontrada na página de combate (<a href="combate.html">Ler mais</a>).</p>
+
+        <h2>Perícias</h2>
+        <p>As perícias são o que definem a habilidade de um personagem em ações específicas, como por exemplo tratar um machucado, investigar pistas, continuar consciente mesmo quando muito cansado, etc. Como mencionado anteriormente, perícias não possuem valores próprios e utilizam o roll de seus atributos pais, apesar de que é possível você ser habilidoso em perícias, o que dão um bônus a elas.</p>
+        <p>As perícias e suas utilidades serão listadas a seguir.</p> <br>
+        
+        <div id="tabela">
+            <table>
+                <th>PERÍCIA</th>
+                <th>ATRIBUTO PAI</th>
+                <th>DEFINIÇÃO</th>
+                <th>EXEMPLOS</th>
+                <tr>
+                    <td>Atletismo</td>
+                    <td>Força</td>
+                    <td>Capacidade atlética geral, sua força e capacidade de carregar peso</td>
+                    <td>Correr, nadar, saltar...</td>
+                </tr>
+                <tr>
+                    <td>Luta</td>
+                    <td>Força</td>
+                    <td>Maestria em combate "corporal", ou seja, de armas de pequeno a médio alcance</td>
+                    <td>Armas de arremesso, socar, atacar com uma arma...</td>
+                </tr>
+                <tr>
+                    <td>Acrobacia</td>
+                    <td>Agilidade</td>
+                    <td>Equilíbrio e capacidade acrobática</td>
+                    <td>Amortecer queda, utilizar objetos instáveis como superfície, atravessar passagens estreitas...</td>
+                </tr>
+                <tr>
+                    <td>Furtividade</td>
+                    <td>Agilidade</td>
+                    <td>Habilidade de disfarce e se esconder</td>
+                    <td>Não ser detectado por um inimigo, se esconder de alguém...</td>
+                </tr>
+                <tr>
+                    <td>Percepção</td>
+                    <td>Agilidade</td>
+                    <td>"Nível" de seus cinco sentidos, seu olfato, visão, audição, tato e paladar</td>
+                    <td>Escutar algo que normalmente seria impossível, detectar algo oculto...</td>
+                </tr>
+                <tr>
+                    <td>Precisão</td>
+                    <td>Agilidade</td>
+                    <td>Mira, o quão bom é em acertar projéteis de longa distância</td>
+                    <td>Atirar uma pistola, um rifle...</td>
+                </tr>
+                <tr>
+                    <td>Prestidigitação</td>
+                    <td>Agilidade</td>
+                    <td>Capacidades de trapacear ou "roubar"</td>
+                    <td>Roubar algo de um oponente sem que ele perceba, realizar um truque de mágica...</td> <!--Especifico, não?-->
+                </tr>
+                <tr>
+                    <td>Vigor</td>
+                    <td>Constituição</td>
+                    <td>Resistência física, capacidade de aguentar ferimentos</td>
+                    <td>Realizar ações com diversos ferimentos, continuar de pé mesmo sem energia...</td>
+                </tr>
+                <tr>
+                    <td>Blefar</td>
+                    <td>Carisma</td>
+                    <td>O quão convincente suas mentiras são</td>
+                    <td>Mentir, ocultar a verdade...</td>
+                </tr>
+                <tr>
+                    <td>Intimidação</td>
+                    <td>Carisma</td>
+                    <td>Capacidade de causar medo com suas ações</td>
+                    <td>Assustar ou botar medo em alguém...</td>
+                </tr>
+                <tr>
+                    <td>Persuasão</td>
+                    <td>Carisma</td>
+                    <td>Habilidade de convencimento, sua diplomacia</td>
+                    <td>Convencer alguém de que algo é verdade...</td>
+                </tr>
+                <tr>
+                    <td>Vontade</td>
+                    <td>Carisma</td>
+                    <td>Sua capacidade de tomar decisões difíceis, basicamente sua sanidade</td>
+                    <td>Matar alguém próximo, resistir a controles mentais, abandonar alguém para morrer...</td>
+                </tr>
+                <tr>
+                    <td>Improviso</td>
+                    <td>Inteligência</td>
+                    <td>Conhecimento em "mecânica"</td>
+                    <td>Consertar algo, construir um item...</td>
+                </tr>
+                <tr>
+                    <td>Intelecto</td>
+                    <td>Inteligência</td>
+                    <td>O QI de seu personagem, sua capacidade de raciocinio</td>
+                    <td>Entender algo, pensar em um plano, descobrir um ponto fraco...</td>
+                </tr>
+                <tr>
+                    <td>Intuição</td>
+                    <td>Inteligência</td>
+                    <td>O "sexto sentido"</td>
+                    <td>Sentir o perigo, seguir sua natureza para achar uma melhor opção...</td>
+                </tr>
+                <tr>
+                    <td>Medicina</td>
+                    <td>Inteligência</td>
+                    <td>Conhecimento médico, habilidade em utilizar certos itens</td>
+                    <td>Tratar um ferimento, realizar operações médicas...</td>
+                </tr>
+                <tr>
+                    <td>Sabedoria</td>
+                    <td>Inteligência</td>
+                    <td>O quão bom é em utilizar sua experiência para sua vantagem</td>
+                    <td>Lembrar de detalhes de uma missão passada, facilitar a realização de coisas que você já fez no passado...</td>
+                </tr>
+                <tr>
+                    <td>Alquimia</td>
+                    <td>Arcanismo</td>
+                    <td>Maestria na alteração de propriedades da matéria comum</td>
+                    <td>Transformar o sangue de uma ferida em sólido, remover o aspecto queimável de algo...</td>
+                </tr>
+                <tr>
+                    <td>Disfarce</td>
+                    <td>Arcanismo</td>
+                    <td>Capacidades ilusionistas</td>
+                    <td>Ocultar a si mesmo, criar miragens, confundir oponentes...</td>
+                </tr>
+                <tr>
+                    <td>Momento</td>
+                    <td>Arcanismo</td>
+                    <td>Habilidades relacionadas a causar ou parar movimento</td>
+                    <td>Influenciar o ambiente para dificultar uma fuga, refletir projéteis não mágicos...</td>
+                </tr>
+                <tr>
+                    <td>Pressão</td>
+                    <td>Arcanismo</td>
+                    <td>Capacidade de aplicar força com matéria arcana</td>
+                    <td>Recriar um soco, amassar ou quebrar um objeto... <br>Observação: Um soco de pressão terá dano 100% efetivo em um alcance máximo de 3 quadrados, sofrendo uma penalidade de -2 dano a cada quadrado após o limite.</td>
+                </tr>
+                <tr>
+                    <td>Visão</td>
+                    <td>Arcanismo</td>
+                    <td>Capacidade de enxergar coisas normalmente ocultas</td>
+                    <td>Ver uma armadilha, inimigo oculto, um ponto fraco...</td>
+                </tr>
+            </table>
+        </div>
+        <a id="mobile" href="https://docs.google.com/document/d/1872-LsZze9ab2sPJpHm9ufji18YW2YJ6S2CB24mTHvw/edit?usp=sharing" target="_blank">Perícias (MOBILE)</a>
+    </div>
+</body>
+</html>
